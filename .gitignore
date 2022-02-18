@@ -1,0 +1,15 @@
+# Compiled JavaScript files
+functions/lib/**/*.js
+functions/lib/**/*.js.map
+functions/lib/
+
+# TypeScript v1 declaration files
+functions/src/typings/
+
+# Node.js dependency directory
+functions/node_modules/
+functions/package-lock.json
+functions/src/serviceAccount.json
+
+# Firebase files
+functions/firebase-debug.log

@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "lib": ["ES6"],
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "strict": false,
+    "esModuleInterop": true,
+    "target": "es2017",
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": ["./node_modules/@types", "src/types"],
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*":["./src/utils/*"],
+      "@controllers/*":["src/controllers/*"],
+      "@routes/*":["src/routes/*"],
+      "@interfaces/*":["./src/interfaces/*"],
+    }
+  },
+  "compileOnSave": true,
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
+  ]
+}

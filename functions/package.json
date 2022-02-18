@@ -1,0 +1,44 @@
+{
+  "name": "functions",
+  "main": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "babel src --extensions \".js,.ts\" --out-dir lib --copy-files --no-copy-ignored",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "ts-paths": "ts-node -r tsconfig-paths/register src/index.ts",
+    "deploy": "npm run ts-paths && firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "dependencies": {
+    "@google-cloud/bigquery": "^5.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-typescript": "^7.14.5",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "tsconfig-paths": "^3.12.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "firebase-functions-test": "^0.2.0",
+    "prettier": "^2.3.2",
+    "typescript": "^3.8.0"
+  },
+  "private": true
+}
